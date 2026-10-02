@@ -2,7 +2,7 @@
 
 API desenvolvida em **FastAPI** e **PostgreSQL** para centralizar o ciclo de vida de eventos, incluindo cadastro de usuários, gestão de eventos, programação de atividades, vendas de ingressos e inscrições com controle de capacidade e segurança via JWT.
 
-## 🚀 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 * **Python 3.12**
 * **FastAPI** — Framework web assíncrono RESTful
@@ -14,7 +14,7 @@ API desenvolvida em **FastAPI** e **PostgreSQL** para centralizar o ciclo de vid
 
 ---
 
-## 📁 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```text
 eventos-api/
@@ -37,52 +37,23 @@ eventos-api/
 
 ---
 
-## ⚙️ Como Executar a Aplicação
+# Como Executar a Aplicação
 
-### 1. Clonar o repositório e criar o ambiente virtual
-```bash
-git clone <URL_DO_REPOSITORIO>
-cd eventos-api
-python3 -m venv venv
-source venv/bin/activate  # No Windows: venv\Scripts\activate
-```
-
-### 2. Instalar as dependências
-```bash
+## 1. Instalar as dependências
+``bash
 pip install -r requirements.txt
-```
-
-### 3. Configurar Variáveis de Ambiente
-Copie o arquivo `.env.example` para `.env` e configure suas credenciais do banco PostgreSQL:
-```bash
-cp .env.example .env
-```
-
-### 4. Executar as Migrações do Banco
-```bash
-alembic upgrade head
-```
-
-### 5. Iniciar o Servidor FastAPI
-```bash
+``
+## 2. Iniciar o Servidor FastAPI
+``bash
 uvicorn app.main:app --reload
-```
+``
 
-Acesse a documentação interativa no navegador:
 * **Swagger UI:** [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-* **ReDoc:** [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
 
 ---
 
-## 🧪 Como Executar os Testes Automatizados
 
-```bash
-pytest -v
-```
-
----
-
-## 🔐 Perfis de Acesso (RBAC)
+##  Perfis de Acesso (RBAC)
 
 * **Admin:** Acesso irrestrito a todas as rotas e exclusão de eventos (`RN10`).
 * **Organizador:** Pode criar eventos, editar os próprios eventos (`RN09`) e adicionar atividades e ingressos aos seus eventos.
